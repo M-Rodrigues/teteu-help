@@ -2,7 +2,7 @@ async function fetchAndRenderizeProducts() {
   try {
     const response = await fetch('https://api.mercadolibre.com/sites/MLB/search?q=computador');
     const { results } = await response.json();
-    console.log(results);
+    // console.log(results);
     results.forEach((product) => {
       const { thumbnail, id, title } = product;
 
@@ -32,7 +32,7 @@ function createProductItemElement({ sku, name, image }) {
   const section = document.createElement('section');
   section.className = 'item';
 
-  console.log({ sku, name, image });
+  // console.log({ sku, name, image });
   section.appendChild(createCustomElement('span', 'item__sku', sku));
   section.appendChild(createCustomElement('span', 'item__title', name));
   section.appendChild(createProductImageElement(image));
