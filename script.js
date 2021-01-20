@@ -60,6 +60,9 @@ function cartItemClickListener(event) {
   // Remover item da lista do carrinho
   console.log('Yey on cart item');
 
+  // Remover o item em questao
+  // Funcao removeChild so vai funcionar se estiver sendo chamada o parentNode, assim:
+  event.target.parentNode.removeChild(event.target)
 }
 
 function createCartItemElement(product) {
